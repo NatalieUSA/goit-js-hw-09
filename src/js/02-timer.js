@@ -5,19 +5,12 @@ import Notiflix from 'notiflix';
 // console.log(Notiflix);
 
 const text = document.querySelector('#datetime-picker');
-console.log(text);
 const btnStart = document.querySelector('button[data-start]');
-console.log(btnStart);
 const timer = document.querySelector('.timer');
-console.log(timer);
 const days = document.querySelector('span[data-days]');
-console.log(days);
 const hours = document.querySelector('span[data-hours]');
-console.log(hours);
 const minutes = document.querySelector('span[data-minutes]');
-console.log(minutes);
 const seconds = document.querySelector('span[data-seconds]');
-console.log(seconds);
 
 btnStart.disabled = true;
 
@@ -56,14 +49,9 @@ function convertMs(ms) {
   return { days, hours, minutes, seconds };
 }
 
-console.log(convertMs(2000)); // {days: 0, hours: 0, minutes: 0, seconds: 2}
-console.log(convertMs(140000)); // {days: 0, hours: 0, minutes: 2, seconds: 20}
-console.log(convertMs(24140000)); // {days: 0, hours: 6 minutes: 42, seconds: 20}
-
-btnStart.addEventListener('click', onBtnClick);
-function onBtnClick(e) {
-  console.log(e);
-}
+// console.log(convertMs(2000)); // {days: 0, hours: 0, minutes: 0, seconds: 2}
+// console.log(convertMs(140000)); // {days: 0, hours: 0, minutes: 2, seconds: 20}
+// console.log(convertMs(24140000)); // {days: 0, hours: 6 minutes: 42, seconds: 20}
 
 function addLeadingZero(value) {
   return value.toString().padStart(2, '0');
