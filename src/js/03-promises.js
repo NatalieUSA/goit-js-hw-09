@@ -8,12 +8,14 @@ const button = document.querySelector('button');
 function createPromise(position, delay) {
   const promise = new Promise((resolve, reject) => {
     const shouldResolve = Math.random() > 0.3;
-    console.log(shouldResolve);
-    if (shouldResolve) {
-      resolve({ position, delay });
-    } else {
-      reject({ position, delay }), delay;
-    }
+    // console.log(shouldResolve);
+    setTimeout(() => {
+      if (shouldResolve) {
+        resolve({ position, delay });
+      } else {
+        reject({ position, delay });
+      }
+    }, delay);
   });
   return promise;
 }
